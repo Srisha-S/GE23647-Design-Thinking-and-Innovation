@@ -1,0 +1,25 @@
+/* Project groups retain the Home palette and the same compact collection rows. */
+.wf-folder-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 3px 0 18px; flex-wrap: wrap; }
+.wf-folder-toolbar .btn, .wf-project-selection-bar .btn { min-height: 44px; font-size: 12px; padding: 10px 13px; }
+.wf-folder-toolbar .text-button { min-height: 44px; font-size: 12px; gap: 7px; }
+.wf-folders { display: grid; gap: 10px; margin-bottom: 22px; }
+.wf-folder-row { display: flex; align-items: center; border: 1px solid var(--border); background: var(--surface); border-radius: 16px; padding: 8px; }
+.wf-folder-open { display: flex; align-items: center; gap: 12px; padding: 0; flex: 1; min-width: 0; min-height: 58px; text-align: left; color: var(--text-primary); }
+.wf-folder-open > span:nth-child(2) { display: grid; flex: 1; min-width: 0; gap: 5px; }
+.wf-folder-open strong { font-size: 14px; overflow-wrap: anywhere; }
+.wf-folder-open small { font-size: 11px; color: var(--text-secondary); }
+.wf-folder-icon { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 11px; background: var(--yellow); color: #D79912; flex-shrink: 0; }
+.wf-folder-open > svg { color: var(--text-secondary); flex-shrink: 0; }
+.wf-project-group-title { margin: 0 0 12px; font-size: 14px; font-weight: 650; color: var(--text-primary); }
+.wf-project-selection-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 10px; margin-bottom: 13px; border-radius: 13px; border: 1px solid var(--border); background: var(--surface); font-size: 12px; }
+.wf-project-selection-bar > span { flex: 1; }
+.wf-project-selection-bar .text-button { min-height: 44px; font-size: 12px; }
+.wf-project-checkbox { width: 22px; height: 22px; accent-color: var(--blue); margin: 0 6px; flex-shrink: 0; }
+.wf-projects .wf-project-row.is-selected { border-color: var(--blue); }
+.wf-project-folder-label { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-secondary); margin: 0 0 13px; }
+.wf-folder-project-choices { display: grid; gap: 8px; max-height: 45vh; overflow-y: auto; }
+.wf-folder-project-choices > label { display: flex; align-items: center; gap: 11px; padding: 11px; min-height: 58px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); cursor: pointer; }
+.wf-folder-project-choices input { width: 20px; height: 20px; accent-color: var(--blue); flex-shrink: 0; }
+.wf-folder-project-choices span { display: grid; gap: 5px; min-width: 0; }
+.wf-folder-project-choices strong { font-size: 13px; overflow-wrap: anywhere; color: var(--text-primary); }
+.wf-folder-project-choices small { font-size: 11px; color: var(--text-secondary); }

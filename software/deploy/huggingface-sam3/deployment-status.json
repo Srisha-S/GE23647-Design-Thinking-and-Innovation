@@ -1,0 +1,73 @@
+{
+  "repo": "Vizhodhan/chroma-sam3",
+  "space_url": "https://huggingface.co/spaces/Vizhodhan/chroma-sam3",
+  "requested_hardware": "zero-a10g",
+  "paid_hardware_requested": false,
+  "secret_values_read_or_uploaded": false,
+  "real_cloud_verified": true,
+  "files": [
+    {
+      "path": "app.py",
+      "bytes": 5028,
+      "sha256": "7e95c7ed7f95a21c380ea24709cd49fd18a3b63445369df0c05f7bc56736fb3a"
+    },
+    {
+      "path": "adapter.py",
+      "bytes": 13026,
+      "sha256": "43df7d3d0db94a80e7ccdfd543f002f2cf29732cd8b63a5b2809806d22aa3610"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 629,
+      "sha256": "4b11cdfc9b70ee6c103197257ff55601cf1045b844d6c12fb4d8fa4760221e1a"
+    },
+    {
+      "path": "packages.txt",
+      "bytes": 16,
+      "sha256": "6a84d2861ec962a1e12c22e7a6dd552a6105ef6e7585e189104b984eb19b408b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3006,
+      "sha256": "f4003ee53c6054584fa86bb3aa1f271cc473e43421462f2b2c2afe171f68254e"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 132,
+      "sha256": "c40a24adde422efb223acba8dd9c0e594e4d72fa21c524f9812636b1a5b0dce6"
+    },
+    {
+      "path": "chroma_sam3_core.py",
+      "bytes": 8695,
+      "sha256": "566f0a24a6774aa3f5a9ec488f6b4bd24a56640e92f8bf52161605bd8197a97b"
+    }
+  ],
+  "hardware": "zero-a10g",
+  "commit": "d798f55948211ff3f107e5a0093e332ddf9219a8",
+  "remote_manifest_verified": true,
+  "required_secret_present": true,
+  "status": "running_real_api_desktop_and_physical_android_verified",
+  "real_api_verified": true,
+  "real_desktop_ui_verified": true,
+  "physical_android_cloud_verified": true,
+  "health_ready": true,
+  "remaining_blocker": null,
+  "verification_reports": [
+    "artifacts/real-cloud-sam3-api/real-cloud-api-verification.json",
+    "artifacts/real-cloud-sam3-ui/real-cloud-ui-verification.json",
+    "artifacts/real-cloud-sam3-mobile-ui/real-cloud-ui-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/physical-android-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/2026-10-11-local/physical-android-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/2026-10-11-cloud/physical-android-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/2026-10-11-updated-apk/physical-android-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/2026-10-11-updated-controls/physical-android-controls-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/2026-10-11-native/native-controls-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/2026-10-11-updated-apk/launch-verification.json",
+    "artifacts/real-cloud-sam3-physical-android/2026-10-11-acceptance-summary.json"
+  ],
+  "physical_android_local_controls_verified": true,
+  "last_physical_android_verification_date": "2026-10-11",
+  "physical_android_native_controls_verified": true,
+  "physical_android_appearance_controls_verified": true,
+  "latest_android_apk_sha256": "019d684310b0a972dbf06f2c4546e448130df3e2ab7313d8a8225a1693dbe83c"
+}

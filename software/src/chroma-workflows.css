@@ -1,0 +1,33 @@
+.chroma-tool-tabs { max-width: 640px; margin: 0 auto 20px; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 5px; padding: 5px; background: var(--surface-soft); border-radius: 15px; }
+.chroma-tool-tabs button { min-width: 0; min-height: 44px; padding: 6px 3px; border-radius: 11px; font-size: 12px; line-height: 1.25; font-weight: 650; color: var(--text-secondary); }
+.chroma-tool-tabs button.active { background: var(--yellow); color: #171B2A; box-shadow: 0 3px 8px #00000008; }
+.studio-drawer .chroma-menu-bottom { margin-top: auto; padding-top: 28px; flex-shrink: 0; }
+.chroma-menu-bottom .wireframe-menu-device { margin-top: 0 !important; }
+.chroma-device { display: grid; gap: 18px; }
+.chroma-device-section { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px; min-width: 0; }
+.chroma-device-section h2 { font-size: 17px; margin: 0 0 18px; }
+.chroma-device-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.chroma-device-heading h2 { margin-bottom: 0; }
+.chroma-device-status { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-secondary); }
+.chroma-device-specs { margin: 18px 0; }
+.chroma-device-specs > div { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 47px; border-bottom: 1px solid var(--border); font-size: 12px; }
+.chroma-device-specs dt { display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+.chroma-device-specs dd { display: flex; align-items: center; gap: 5px; text-transform: capitalize; margin: 0; text-align: right; }
+.chroma-device-specs small { color: var(--text-secondary); font-size: 9px; }
+.chroma-connection-options { display: grid; gap: 12px; }
+.chroma-connection-options .connection-choice { background: var(--surface-soft); color: var(--text-primary); border: 1px solid var(--border); border-radius: 15px; padding: 13px; min-height: 72px; display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; }
+.chroma-connection-options .connection-choice.selected { background: var(--yellow-soft); border-color: var(--yellow); }
+.chroma-connection-options .connection-choice > span { flex: 1; min-width: 0; }
+.chroma-connection-options .connection-choice strong, .chroma-connection-options .connection-choice small { display: block; }
+.chroma-connection-options .connection-choice strong { font-size: 13px; }
+.chroma-connection-options .connection-choice small { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+.chroma-connection-options .helper { font-size: 11px; margin: 0 2px 6px; }
+.chroma-device-wifi { border: 1px solid var(--border); border-radius: 15px; padding: 13px; }
+.chroma-device-wifi > label { display: flex; gap: 9px; align-items: center; margin-bottom: 12px; font-size: 13px; font-weight: 650; }
+.chroma-device-wifi .input-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chroma-device-wifi .input-row .input { width: 100%; min-width: 0; flex: 1 1 200px; }
+.chroma-device-wifi small { display: block; font-size: 10px; color: var(--text-secondary); margin-top: 9px; }
+.chroma-ble-debug { border-top: 1px solid var(--border); margin-top: 18px; padding-top: 12px; font-size: 11px; color: var(--text-secondary); }
+.chroma-ble-debug summary { min-height: 34px; cursor: pointer; }
+.chroma-ble-debug pre { max-height: 140px; max-width: 100%; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media(max-width:360px) { .chroma-tool-tabs { gap: 3px; padding: 3px; } .chroma-tool-tabs button { font-size: 10px; } .chroma-device-section { padding: 16px; } }

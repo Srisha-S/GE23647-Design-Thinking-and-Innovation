@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CHROMA Studio</string>
+    <string name="title_activity_main">CHROMA Studio</string>
+    <string name="package_name">com.chroma.app</string>
+    <string name="custom_url_scheme">com.chroma.app</string>
+</resources>

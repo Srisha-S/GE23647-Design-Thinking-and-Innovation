@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Keep the supplied artwork within the adaptive icon's safe area. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="16.6667%">
+    <bitmap android:src="@drawable/chroma_app_icon"
+        android:gravity="fill" android:filter="true" />
+</inset>

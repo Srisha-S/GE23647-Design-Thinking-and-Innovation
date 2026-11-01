@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.tools/
+artifacts/temp-browser/
+*.log
+__pycache__/
+.env
+.env.*
+!.env.example
+*.pt

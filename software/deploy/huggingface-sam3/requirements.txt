@@ -1,0 +1,17 @@
+# Verified supported ZeroGPU stack. Model source matches local CHROMA.
+--extra-index-url https://download.pytorch.org/whl/cu128
+# ZeroGPU's config validator requires the public version without a +cu suffix.
+# The CUDA wheel index still resolves the same 2.10/cu128 runtime.
+torch==2.10.0
+torchvision==0.25.0
+gradio==6.29.1
+spaces==0.51.3
+huggingface_hub==2.1.1
+Pillow==12.3.0
+numpy==1.26.4
+einops==0.8.2
+psutil==7.2.2
+pycocotools==2.0.11
+# Official pinned source imports pkg_resources (removed in setuptools 82).
+setuptools==78.1.0
+sam3 @ git+https://github.com/facebookresearch/sam3.git@0570b3a5be9c4e694f23d85232fb55f4a6f1f7fc

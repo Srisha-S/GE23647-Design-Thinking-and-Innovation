@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "platform": "linux",
+  "python": "3.12.3",
+  "stage": "complete",
+  "versions": {
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "triton": "3.6.0",
+    "einops": "0.8.2",
+    "psutil": "7.2.2",
+    "setuptools": "78.1.0",
+    "sam3": "0.1.0"
+  },
+  "sam3": {
+    "version": "0.1.0",
+    "expected_commit": "0570b3a5be9c4e694f23d85232fb55f4a6f1f7fc",
+    "installed_vcs_commit": "0570b3a5be9c4e694f23d85232fb55f4a6f1f7fc",
+    "requested_vcs_revision": "0570b3a5be9c4e694f23d85232fb55f4a6f1f7fc",
+    "matches_expected_commit": true
+  },
+  "model_weights_loaded": false,
+  "model_download_attempted": false,
+  "torch_cuda_runtime": "12.8",
+  "gpu": {
+    "index": 0,
+    "name": "NVIDIA GeForce RTX 4060",
+    "compute_capability": [
+      8,
+      9
+    ],
+    "total_mib": 8187.5,
+    "free_mib": 7065.0,
+    "allocated_mib": 8.127,
+    "reserved_mib": 22.0,
+    "peak_allocated_mib": 8.127,
+    "peak_reserved_mib": 22.0,
+    "bf16_supported": true
+  },
+  "compute": {
+    "operation": "16x16 float32 matrix multiplication on CUDA",
+    "correctness": "exact match with CPU reference",
+    "elapsed_seconds": 0.580088,
+    "includes": "host-to-device copy and synchronized CUDA matrix multiplication"
+  },
+  "message": "Imports and real CUDA computation passed. Model loading and segmentation must be verified separately."
+}

@@ -1,0 +1,86 @@
+/* Keep every workspace view on Home's shared light/dark canvas.
+   Colour swatches, photographs and illustrated feature cards keep their colours. */
+:root {
+  --link-colour: var(--blue);
+  --error-surface: #FFF2F3;
+  --error-border: #F2BBC4;
+}
+:root[data-theme="dark"] {
+  --link-colour: #92AFFF;
+  --error-surface: #3A2128;
+  --error-border: #77404D;
+}
+
+html, body, #root {
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+html { scrollbar-color: var(--text-secondary) var(--bg); }
+#root { min-height: 100dvh; }
+main { background-color: var(--bg); }
+
+.colour-input {
+  background: var(--surface);
+  border-color: var(--border);
+}
+input::placeholder, textarea::placeholder { color: var(--text-secondary); opacity: 1; }
+.input:focus, select:focus, textarea:focus,
+.collection-search:focus-within,
+.collection-page .input:focus-visible,
+.collection-page textarea:focus-visible { border-color: var(--blue); outline-color: var(--blue); }
+.metric:hover, .icon-button:hover, .connection-choice:hover { background: var(--surface-soft); }
+.badge, .meter-labels, .delta-number small { color: var(--text-secondary); }
+.text-button,
+.studio-tools .metric svg,
+.scan-result-detail .metric svg,
+.studio-tools .page-heading .eyebrow,
+.studio-compare-editor > summary,
+.studio-image-reference .reference-section-heading .text-button,
+.studio-collections .studio-match-target { color: var(--link-colour); }
+.skip-link { color: var(--bg); }
+
+/* Old collection metadata used the original sage theme. */
+.collection-count, .collection-count span,
+.collection-meta, .collection-icon,
+.project-card-counts,
+.project-notes-status, .project-notes-footer { color: var(--text-secondary); }
+.collection-icon:hover { color: var(--text-primary); }
+.collection-tabs span,
+.library-card-bottom span { background: var(--surface-soft); color: var(--text-secondary); }
+.collection-tags button { background: var(--surface-soft); color: var(--text-primary); }
+.collection-tags button:hover { background: var(--yellow-soft); }
+.library-card, .live-card, .recent-card { background: var(--surface); border-color: var(--border); }
+.project-card, .project-card-open { background: var(--surface); color: var(--text-primary); }
+.project-palette.empty { color: var(--link-colour); }
+.project-banner, .saved-indicator { background: var(--surface-soft) !important; color: var(--text-primary) !important; }
+.project-card:hover { border-color: var(--blue); }
+
+/* Scan and Device share their chrome; the OLED itself is a device illustration. */
+.studio-scan .oled-section { background: var(--surface); border-color: var(--border); }
+.oled-steps, .oled-steps span { color: var(--text-secondary); }
+.future-badge { background: var(--surface-soft); border-color: var(--border); color: var(--text-secondary); }
+.reference-surface { background: var(--surface-soft); border-color: var(--border); }
+.calibration-complete { color: var(--text-primary); }
+.calibration-complete > svg { color: var(--green); }
+
+.visualize-upload { border-color: var(--border); }
+.visualize-error { background: var(--error-surface); border-color: var(--error-border); }
+.dropzone.dragging { background: var(--yellow-soft); border-color: var(--blue); }
+[data-theme="dark"] .visualize-step { color: var(--yellow); }
+[data-theme="dark"] .device-bluetooth-state:not(.unavailable):not(.disconnected):not(.permission-denied):not(.error) { color: var(--green); }
+[data-theme="dark"] .device-bluetooth-state.permission-denied,
+[data-theme="dark"] .device-bluetooth-state.error { color: #FF99A4; }
+
+/* Native tab, select and modal chrome follows the selected appearance too. */
+.chroma-modal, .calibration-modal, .studio-drawer {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+.chroma-modal::backdrop, .calibration-modal::backdrop { background: #00000060; }
+@media (prefers-reduced-motion: no-preference) {
+  .panel, .input, select, textarea, .format-tabs,
+  .studio-settings-tabs, .collection-search {
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+  }
+}

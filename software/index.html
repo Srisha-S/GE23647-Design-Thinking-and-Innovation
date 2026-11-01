@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="description" content="CHROMA — your workspace for capturing, comparing and creating with real-world colour.">
+  <title>CHROMA Studio — Turn colours into possibilities.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@400;500;600;650;700;750;800&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/branding/chroma-icon.png">
+  <link rel="apple-touch-icon" href="/branding/chroma-icon.png">
+  <link rel="preload" as="image" href="/branding/chroma-splash.png">
+  <style>
+    body.chroma-starting { overflow: hidden; }
+    #chroma-launch { position: fixed; inset: 0; z-index: 2147483647; display: grid; place-items: center; overflow: hidden; background: #0158FF; }
+    #chroma-launch img { grid-area: 1 / 1; width: 100%; height: 100%; object-fit: contain; min-height: 0; min-width: 0; opacity: 0; }
+    .chroma-launch-mark {
+      grid-area: 1 / 1; width: clamp(96px, 28vw, 132px); aspect-ratio: 1; z-index: 1;
+      border: 1px solid rgba(255, 255, 255, .22); border-radius: 30%;
+      background: linear-gradient(145deg, rgba(255, 255, 255, .18), rgba(255, 255, 255, .04));
+      box-shadow: 0 16px 48px rgba(0, 28, 112, .18), inset 0 1px 0 rgba(255, 255, 255, .2);
+    }
+    .chroma-launch-mark svg { display: block; width: 100%; height: 100%; }
+    .chroma-launch-stroke { stroke-dasharray: 1; stroke-dashoffset: 0; }
+    .chroma-launch-lens { opacity: 1; }
+    .chroma-launch-running { animation: chroma-launch-exit var(--launch-fade, 240ms) ease-out var(--launch-hold, 1560ms) forwards; }
+    .chroma-launch-running .chroma-launch-mark { animation: chroma-mark-enter 400ms cubic-bezier(.2, .8, .2, 1) both, chroma-mark-lift 380ms cubic-bezier(.4, 0, .2, 1) 640ms forwards; }
+    .chroma-launch-running .chroma-launch-stroke { animation: chroma-stroke-draw 520ms cubic-bezier(.25, .6, .25, 1) var(--stroke-delay, 80ms) both; }
+    .chroma-launch-running .chroma-launch-lens { animation: chroma-lens-enter 360ms ease-out 320ms both; }
+    .chroma-launch-running img { animation: chroma-artwork-enter 540ms cubic-bezier(.2, .8, .2, 1) 660ms both; }
+    @keyframes chroma-mark-enter { from { opacity: 0; transform: translateY(12px) scale(.84); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes chroma-stroke-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes chroma-lens-enter { from { opacity: 0; transform: scale(.85); transform-origin: center; } to { opacity: 1; transform: scale(1); transform-origin: center; } }
+    @keyframes chroma-mark-lift { to { opacity: 0; transform: translateY(-30px) scale(.84); } }
+    @keyframes chroma-artwork-enter { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes chroma-launch-exit { to { opacity: 0; } }
+    /* This also applies before the application's stylesheet has loaded. */
+    @media (prefers-reduced-motion: reduce) {
+      #chroma-launch, #chroma-launch * { animation: none !important; transition: none !important; }
+      #chroma-launch img { opacity: 1; transform: none; }
+      .chroma-launch-mark { display: none; }
+    }
+  </style>
+  <script type="module" src="/src/main.tsx"></script>
+</head>
+<body class="chroma-starting">
+  <div id="chroma-launch" role="status" aria-label="Starting CHROMA Studio">
+    <div class="chroma-launch-mark" aria-hidden="true">
+      <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path class="chroma-launch-stroke" pathLength="1" d="M32 14H22a8 8 0 0 0-8 8v10M64 14h10a8 8 0 0 1 8 8v10M82 64v10a8 8 0 0 1-8 8H64M32 82H22a8 8 0 0 1-8-8V64"/>
+        </g>
+        <g stroke-width="8" stroke-linecap="round">
+          <path class="chroma-launch-stroke" pathLength="1" style="--stroke-delay: 120ms" stroke="#FFDC30" d="M46 25a25 25 0 0 0-22 30"/>
+          <path class="chroma-launch-stroke" pathLength="1" style="--stroke-delay: 180ms" stroke="#46A0FF" d="M53 25a25 25 0 0 1 20 22"/>
+          <path class="chroma-launch-stroke" pathLength="1" style="--stroke-delay: 240ms" stroke="#FF5142" d="M72 59a25 25 0 0 1-44 4"/>
+        </g>
+        <g class="chroma-launch-lens">
+          <circle cx="48" cy="49" r="13" stroke="#FFF" stroke-opacity=".28" stroke-width="4"/>
+          <circle cx="44" cy="45" r="3" fill="#FFF"/>
+        </g>
+      </svg>
+    </div>
+    <img src="/branding/chroma-splash.png" alt="" aria-hidden="true" fetchpriority="high">
+  </div>
+  <div id="root" inert aria-busy="true"></div>
+  <noscript><style>#chroma-launch { display: none; } body.chroma-starting { overflow: auto; }</style><p class="noscript">Enable JavaScript to use CHROMA’s interactive colour tools.</p></noscript>
+</body>
+</html>

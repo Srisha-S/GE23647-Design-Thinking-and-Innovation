@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android's system splash masks its icon to a 192dp circle within 288dp.
+     This inset preserves the complete supplied square icon inside that circle. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:width="288dp" android:height="288dp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:width="132dp" android:height="132dp" android:gravity="center">
+        <bitmap android:src="@drawable/chroma_app_icon"
+            android:gravity="fill" android:filter="true" />
+    </item>
+</layer-list>

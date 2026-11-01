@@ -1,0 +1,40 @@
+/* ChromaPod tool panels retain the Home canvas and accent palette. */
+.wireframe-scan,.wireframe-compare { display:flex; flex-direction:column; gap:18px; width:100%; max-width:680px; margin:0 auto; }
+.tool-section-heading { display:flex; justify-content:space-between; align-items:center; gap:14px; }
+.tool-section-heading h2 { font-size:18px; margin:0; font-weight:800; letter-spacing:-.4px; }
+.tool-section-heading > span { font-size:10px; color:var(--text-secondary); }
+.capture-empty { background:var(--surface); border:1px solid var(--border); border-radius:22px; padding:28px 22px; text-align:center; }
+.capture-empty > svg { color:var(--blue); margin:0 auto; }
+.capture-empty h3 { font-size:19px; margin:14px 0 8px; }
+.capture-empty p { max-width:300px; margin:0 auto 20px; color:var(--text-secondary); font-size:12px; line-height:1.7; }
+.capture-empty .btn { min-height:48px; }
+.capture-history,.comparison-history { margin-top:7px; }
+.capture-history > button,.comparison-history > button { display:flex; align-items:center; gap:12px; text-align:left; width:100%; padding:11px 0; border-bottom:1px solid var(--border); color:var(--text-primary); }
+.capture-history > button > i,.comparison-history > button > i { width:42px; height:42px; border-radius:12px; flex-shrink:0; }
+.capture-history > button > span,.comparison-history > button > span { flex:1; min-width:0; }
+.capture-history strong,.comparison-history strong { display:block; font-size:12px; overflow-wrap:anywhere; }
+.capture-history small,.comparison-history small { display:block; color:var(--text-secondary); font-size:10px; margin-top:5px; }
+.capture-connection,.compare-physical-instruction { font-size:12px; color:var(--text-secondary); line-height:1.7; margin:0; }
+.capture-connection .text-button { display:inline; min-height:0; padding:0; font-size:inherit; }
+.wireframe-compare-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+.wireframe-compare-card { display:flex; flex-direction:column; padding:0 0 12px; text-align:left; overflow:hidden; border:1px solid var(--border); border-radius:18px; background:var(--surface); color:var(--text-primary); min-width:0; }
+.wireframe-compare-swatch { display:block; width:100%; aspect-ratio:1.25; min-height:125px; }
+.wireframe-compare-card > strong { margin:10px 11px 0; font-size:13px; }
+.wireframe-compare-card > small { margin:5px 11px 0; font-size:9px; color:var(--text-secondary); line-height:1.5; }
+.wireframe-compare .wireframe-bottom-action { width:100%; min-height:49px; justify-content:center; border-radius:14px; }
+.compare-primary-actions { display:flex; gap:10px; }
+.compare-primary-actions .btn { flex:1; justify-content:center; min-height:49px; }
+.wireframe-compare-waiting { font-size:12px; margin:0; color:var(--text-secondary); line-height:1.7; }
+.comparison-history h2 { font-size:15px; margin:0 0 5px; }
+.compare-capture-options > p { font-size:12px; color:var(--text-secondary); line-height:1.7; }
+.compare-capture-choice { display:flex; gap:12px; align-items:center; width:100%; text-align:left; min-height:60px; padding:9px 0; border-bottom:1px solid var(--border); }
+.compare-capture-choice i { width:39px; height:39px; border-radius:10px; flex-shrink:0; }
+.compare-capture-choice strong { display:block; font-size:12px; }
+.compare-capture-choice small { display:block; font-size:10px; color:var(--text-secondary); margin-top:4px; }
+.compare-colour-editor .colour-picker { margin:15px 0; }
+@media(max-width:360px) { .wireframe-compare-swatch { min-height:110px; } .wireframe-compare-card > small { font-size:8px; } }
+
+.compare-colour-source-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.compare-colour-source-actions .btn { min-width:0; justify-content:center; min-height:48px; font-size:12px; padding:10px 7px; }
+.compare-colour-editor .compare-capture-options { margin:0 0 16px; }
+.compare-capture-options > summary { cursor:pointer; padding:12px 0; color:var(--text-primary); font-weight:650; font-size:13px; }

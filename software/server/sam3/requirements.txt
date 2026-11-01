@@ -1,0 +1,15 @@
+# HTTP service dependencies. Install official CUDA PyTorch and Meta SAM 3
+# separately in Python 3.12+; see README.md. No model download happens here.
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+Pillow>=10.4,<13
+numpy>=1.26,<2
+httpx>=0.27,<1
+# The pinned upstream image builder also imports these transitively, but they
+# are absent from its base package dependency list.
+einops>=0.8,<1
+psutil>=5.9,<8
+# Interactive image predictor imports the COCO mask loader transitively.
+pycocotools>=2.0.10,<3
+# Upstream uses pkg_resources, removed in setuptools 82.
+setuptools>=61,<82

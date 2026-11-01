@@ -1,0 +1,90 @@
+/* Image Match reference presentation. Sampling and device workflows stay in ImagePage. */
+.studio-image-reference > .page-heading { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.studio-image-reference .reference-image-overview { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 24px; margin-bottom: 30px; }
+.studio-image-reference .reference-palette-hero { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(110px, .72fr) minmax(0, 1fr); align-items: center; gap: 24px; padding: 24px 30px; border-radius: 28px; background: linear-gradient(135deg, #ffe44c, #ffd023); color: #17191f; min-height: 220px; overflow: hidden; }
+.studio-image-reference .reference-image-thumbnail { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; aspect-ratio: 1; width: min(100%, 185px); justify-self: center; padding: 8px; border: 0; border-radius: 12px; color: #756213; background: #ffffff91; box-shadow: 0 9px 16px #523d0c26; transform: rotate(-8deg); }
+.studio-image-reference .reference-image-thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 5px; }
+.studio-image-reference .reference-image-thumbnail.has-image { background: #fffdf4; }
+.studio-image-reference .reference-image-thumbnail span { font-size: 11px; font-weight: 650; }
+.studio-image-reference .reference-palette-content { min-width: 0; }
+.studio-image-reference .reference-palette-content h2 { font-size: 22px; font-weight: 800; margin: 0 0 6px; letter-spacing: -.65px; }
+.studio-image-reference .reference-palette-content p { font-size: 13px; line-height: 1.45; margin: 0 0 14px; color: #524819; }
+.studio-image-reference .reference-hero-swatches { display: flex; gap: 5px; padding: 9px; height: 76px; margin: 0 0 12px; border-radius: 15px; background: #fffefa; overflow: hidden; }
+.studio-image-reference .reference-hero-swatches button { flex: 1; min-width: 0; min-height: 0; height: 100%; padding: 0; border: 0; border-radius: 8px; box-shadow: inset 0 0 0 1px #00000006; }
+.studio-image-reference .reference-hero-swatches button:focus-visible { outline: 3px solid #163eff; outline-offset: -3px; }
+.studio-image-reference .reference-hero-action { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 9px 12px; color: #141a2d; background: #fffdf39c; border: 1px solid #fff4a5; border-radius: 12px; font-size: 12px; font-weight: 700; }
+.studio-image-reference .reference-hero-action:disabled { opacity: .6; }
+.studio-image-reference .reference-palette-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px; margin-top: -18px; }
+.studio-image-reference .reference-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 10px; }
+.studio-image-reference .reference-section-heading h2 { margin: 0; color: var(--text-primary); font-size: 20px; font-weight: 800; letter-spacing: -.55px; }
+.studio-image-reference .reference-section-heading .text-button { color: var(--blue, #3366ff); font-size: 11px; padding: 0; flex-shrink: 0; }
+.studio-image-reference .reference-match-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.studio-image-reference .reference-match-card { min-width: 0; overflow: hidden; border-radius: 17px; background: var(--surface-soft, #f2f2f6); }
+.studio-image-reference .reference-match-swatch { position: relative; display: block; width: 100%; height: 125px; padding: 10px; border: 0; border-radius: 17px; text-align: left; }
+.studio-image-reference .reference-similarity-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; height: 23px; padding: 1px 7px; border-radius: 14px; color: #17191f; background: #fffdf5; box-shadow: 0 2px 5px #00000008; font-size: 11px; font-weight: 800; }
+.studio-image-reference .reference-match-card-info { position: relative; min-width: 0; padding: 9px 8px 11px; }
+.studio-image-reference .reference-match-card-info strong { display: block; color: var(--text-primary); font-size: 11px; letter-spacing: -.3px; }
+.studio-image-reference .reference-match-card-info p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-secondary); font-size: 11px; margin: 2px 0 6px; padding-right: 7px; }
+.studio-image-reference .reference-match-card-info small { color: var(--text-secondary); font-size: 10px; }
+.studio-image-reference .reference-card-target { position: absolute; bottom: 3px; right: 1px; display: flex; align-items: center; justify-content: center; width: 30px; min-height: 44px; padding: 0; border: 0; border-radius: 9px; color: var(--text-secondary); background: transparent; }
+.studio-image-reference .reference-score-caption { margin: 8px 0 0; color: var(--text-secondary); font-size: 10px; line-height: 1.5; }
+.studio-image-reference .reference-match-empty { display: flex; align-items: center; gap: 12px; min-height: 108px; padding: 18px; border-radius: 19px; background: var(--surface-soft, #f2f2f6); color: var(--text-secondary); }
+.studio-image-reference .reference-match-empty svg { flex-shrink: 0; color: var(--blue, #3366ff); }
+.studio-image-reference .reference-match-empty p { margin: 0; font-size: 12px; line-height: 1.6; }
+.studio-image-reference .reference-saved-list { display: grid; gap: 8px; }
+.studio-image-reference .reference-saved-row { display: grid; grid-template-columns: minmax(0, 1fr) auto 32px; gap: 8px; align-items: center; position: relative; min-height: 67px; padding: 7px 9px; border-radius: 17px; background: var(--surface-soft, #f2f2f6); }
+.studio-image-reference .reference-saved-view { display: flex; align-items: center; gap: 11px; min-width: 0; min-height: 45px; padding: 0; border: 0; background: transparent; text-align: left; }
+.studio-image-reference .reference-saved-swatch { display: block; width: 41px; height: 41px; flex-shrink: 0; border-radius: 50%; box-shadow: inset 0 0 0 1px #00000005; }
+.studio-image-reference .reference-saved-name { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.studio-image-reference .reference-saved-name strong { color: var(--text-primary); font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.studio-image-reference .reference-saved-name small { color: var(--text-secondary); font-size: 10px; }
+.studio-image-reference .reference-project-label { display: block; max-width: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-radius: 16px; padding: 6px 9px; background: #3366ff14; color: var(--blue, #3366ff); font-size: 9px; }
+.studio-image-reference .reference-saved-menu { position: relative; }
+.studio-image-reference .reference-saved-menu summary { list-style: none; display: flex; justify-content: center; align-items: center; width: 32px; min-height: 44px; cursor: pointer; color: var(--text-secondary); }
+.studio-image-reference .reference-saved-menu summary::-webkit-details-marker { display: none; }
+.studio-image-reference .reference-saved-menu[open] { z-index: 10; }
+.studio-image-reference .reference-saved-menu > div { position: absolute; right: 0; top: 42px; width: 160px; display: grid; padding: 6px; border-radius: 14px; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 10px 25px #00000016; }
+.studio-image-reference .reference-saved-menu button { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px; border: 0; border-radius: 9px; background: transparent; color: var(--text-primary); font-size: 11px; text-align: left; }
+.studio-image-reference .reference-saved-menu button:hover { background: var(--surface-soft); }
+.studio-image-reference .reference-workflow-heading { border-top: 1px solid var(--border); padding-top: 25px; margin-bottom: 16px; }
+.studio-image-reference .reference-workflow-heading h2 { color: var(--text-primary); font-size: 20px; font-weight: 800; letter-spacing: -.55px; margin: 0 0 5px; }
+.studio-image-reference .reference-workflow-heading p { color: var(--text-secondary); font-size: 12px; margin: 0; }
+.studio-image-reference .reference-image-thumbnail:focus-visible, .studio-image-reference .reference-hero-action:focus-visible, .studio-image-reference .reference-match-swatch:focus-visible, .studio-image-reference .reference-saved-view:focus-visible, .studio-image-reference .reference-saved-menu summary:focus-visible { outline: 3px solid var(--blue, #3366ff); outline-offset: 3px; }
+[data-theme="dark"] .studio-image-reference .reference-palette-hero { background: linear-gradient(135deg, #403813, #2f270c); color: #fff4d3; }
+[data-theme="dark"] .studio-image-reference .reference-palette-content p { color: #d0c49d; }
+[data-theme="dark"] .studio-image-reference .reference-hero-swatches { background: #14140f; }
+[data-theme="dark"] .studio-image-reference .reference-hero-action { background: #ffe44c; border-color: #ffe44c; }
+[data-theme="dark"] .studio-image-reference .reference-project-label { background: #3366ff2b; color: #a8bcff; }
+[data-theme="dark"] .studio-image-reference .image-target-status { background: var(--surface-soft); }
+[data-theme="dark"] .studio-image-reference .image-target-status strong { color: #ffe44c; }
+@media (max-width: 700px) {
+  .studio-image-reference .reference-image-overview { grid-template-columns: minmax(0, 1fr); gap: 18px; margin-bottom: 26px; }
+  .studio-image-reference .reference-palette-hero { padding: 19px 17px; min-height: 169px; gap: 17px; grid-template-columns: minmax(0, .84fr) minmax(0, 1fr); border-radius: 25px; }
+  .studio-image-reference .reference-image-thumbnail { max-width: 134px; padding: 7px; border-radius: 9px; }
+  .studio-image-reference .reference-image-thumbnail span { font-size: 9px; }
+  .studio-image-reference .reference-palette-content h2 { font-size: 17px; letter-spacing: -.5px; }
+  .studio-image-reference .reference-palette-content p { font-size: 10px; margin-bottom: 10px; }
+  .studio-image-reference .reference-hero-swatches { height: 62px; border-radius: 11px; gap: 4px; padding: 7px; margin-bottom: 7px; }
+  .studio-image-reference .reference-hero-swatches button { border-radius: 6px; }
+  .studio-image-reference .reference-hero-action { font-size: 10px; padding: 8px 9px; min-height: 44px; gap: 5px; }
+  .studio-image-reference .reference-section-heading { margin-bottom: 7px; }
+  .studio-image-reference .reference-section-heading h2 { font-size: 19px; }
+  .studio-image-reference .reference-match-swatch { height: 93px; padding: 10px; border-radius: 16px; }
+  .studio-image-reference .reference-match-card { border-radius: 16px; }
+  .studio-image-reference .reference-match-card-info { padding: 8px 7px 10px; }
+  .studio-image-reference .reference-score-caption { font-size: 9px; }
+  .studio-image-reference .reference-saved-row { min-height: 60px; border-radius: 16px; padding: 6px 7px; gap: 5px; }
+  .studio-image-reference .reference-saved-swatch { width: 37px; height: 37px; }
+  .studio-image-reference .reference-saved-view { gap: 10px; }
+  .studio-image-reference .reference-saved-name strong { font-size: 11px; }
+  .studio-image-reference .reference-project-label { max-width: 75px; font-size: 8px; padding: 6px 8px; }
+}
+@media (max-width: 350px) {
+  .studio-image-reference .reference-palette-hero { gap: 11px; padding: 18px 13px; }
+  .studio-image-reference .reference-palette-content h2 { font-size: 15px; }
+  .studio-image-reference .reference-match-cards { gap: 6px; }
+  .studio-image-reference .reference-match-card-info strong { font-size: 10px; }
+  .studio-image-reference .reference-match-card-info p { font-size: 9px; }
+  .studio-image-reference .reference-project-label { max-width: 58px; }
+}
+@media (prefers-reduced-motion: reduce) { .studio-image-reference .reference-image-thumbnail { transform: none; } }

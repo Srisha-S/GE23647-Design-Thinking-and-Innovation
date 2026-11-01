@@ -1,0 +1,16 @@
+.themed-picker-trigger { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 48px; text-align: left; font: inherit; color: var(--text-primary); background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 12px 16px; cursor: pointer; }
+.themed-picker-trigger > span { min-width: 0; overflow-wrap: anywhere; }
+.themed-picker-trigger > svg { flex-shrink: 0; color: var(--text-secondary); }
+.themed-picker-trigger:disabled { opacity: .55; cursor: not-allowed; }
+.themed-picker-search { display: flex; align-items: center; gap: 10px; color: var(--text-secondary); }
+.themed-picker-search .input { min-width: 0; flex: 1; }
+.themed-picker-options { display: grid; gap: 9px; margin-top: 14px; }
+.themed-picker-options > button { display: flex; align-items: center; gap: 12px; min-height: 58px; min-width: 0; padding: 12px; text-align: left; font: inherit; border: 1px solid var(--border); border-radius: 14px; background: var(--surface-soft); color: var(--text-primary); cursor: pointer; }
+.themed-picker-options > button.selected { border-color: var(--blue); }
+.themed-picker-options > button:hover, .themed-picker-options > button:focus-visible, .themed-picker-trigger:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.themed-picker-options > button > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.themed-picker-options strong { display: block; font-size: 14px; }
+.themed-picker-options small { display: block; margin-top: 5px; font-size: 12px; color: var(--text-secondary); }
+.themed-picker-swatch { width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0; }
+.themed-picker-choice-icon, .themed-picker-check { flex-shrink: 0; color: var(--blue); }
+.wf-picker-filter { display: grid; gap: 5px; min-width: 0; }

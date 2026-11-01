@@ -1,0 +1,12 @@
+.saved-library-search { display: flex; align-items: center; gap: 9px; }
+.saved-library-search .input { flex: 1; min-width: 0; }
+.saved-library-colours { display: grid; gap: 8px; margin-top: 15px; }
+.saved-library-colours > button { display: flex; align-items: center; gap: 12px; text-align: left; border: 1px solid var(--border); border-radius: 14px; padding: 10px; background: var(--surface-soft); color: var(--text-primary); min-width: 0; }
+.saved-library-colours > button:hover, .saved-library-colours > button:focus-visible { border-color: var(--blue); }
+.saved-library-colours i { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; }
+.saved-library-colours span { min-width: 0; overflow-wrap: anywhere; }
+.saved-library-colours strong { display: block; font-size: 13px; }
+.saved-library-colours small { display: block; margin-top: 5px; font-size: 11px; color: var(--text-secondary); }
+.saved-library-open { margin-top: 18px; }
+.saved-library-colours button > span { flex: 1; }
+.saved-library-colours button[aria-pressed="true"] { border-color: var(--blue); }
